@@ -101,7 +101,7 @@ func dayFormat(t time.Weekday) string {
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "9040"
+		port = "9070"
 	}
 
 	http.HandleFunc("/info", UserHandler)
