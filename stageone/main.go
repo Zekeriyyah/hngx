@@ -42,7 +42,7 @@ func UserHandler(w http.ResponseWriter, r *http.Request) {
 		currentDay := dayFormat(tDay)
 
 		//Handling github url
-		source_url := "https://github.com/Zekeriyyah/hngx/stageone/main.go"
+		source_url := "https://github.com/Zekeriyyah/hngx/blob/main/stageone/main.go"
 		repo_url := "https://github.com/Zekeriyyah/hngx"
 
 		user = User{
