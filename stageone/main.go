@@ -10,13 +10,13 @@ import (
 )
 
 type User struct {
-	Name     string    `json:"slack_name"`
-	Day      string    `json:"current_day"`
-	Time     time.Time `json:"utc_time"`
-	Track    string    `json:"track"`
-	File_url string    `json:"github_file_url"`
-	Repo_url string    `json:"github_rep_url"`
-	Status   int       `json:"status_code"`
+	Name     string `json:"slack_name"`
+	Day      string `json:"current_day"`
+	Time     string `json:"utc_time"`
+	Track    string `json:"track"`
+	File_url string `json:"github_file_url"`
+	Repo_url string `json:"github_repo_url"`
+	Status   int    `json:"status_code"`
 }
 
 var user = User{}
@@ -36,7 +36,9 @@ func UserHandler(w http.ResponseWriter, r *http.Request) {
 
 		//Handling current time and day of the week
 		t := time.Now().UTC()
-		tDay, tTime := t.Weekday(), t
+		tStr := t.Format("2023-09-09T07:05:55Z")
+
+		tDay := t.Weekday()
 
 		//Formatting the return integer as weekday
 		currentDay := dayFormat(tDay)
@@ -48,7 +50,7 @@ func UserHandler(w http.ResponseWriter, r *http.Request) {
 		user = User{
 			Name:     name,
 			Day:      currentDay,
-			Time:     tTime,
+			Time:     tStr,
 			Track:    track,
 			File_url: source_url,
 			Repo_url: repo_url,
