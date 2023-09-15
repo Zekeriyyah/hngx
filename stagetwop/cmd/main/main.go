@@ -15,5 +15,5 @@ func main() {
 	routes.RegisterUserRoutes(r)
 	http.Handle("/", r)
 	fmt.Println("Server is running: ")
-	log.Fatal(http.ListenAndServe("localhost:9830", r))
+	log.Fatal(http.ListenAndServe("localhost:9840", r))
 }
