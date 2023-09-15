@@ -1,7 +1,0 @@
-go 1.20.0
-
-use (
-	./stageone
-	./stagetwo
-	./stagetwop
-)
