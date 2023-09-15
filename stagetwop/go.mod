@@ -1,9 +1,8 @@
-module hngx/stagetwop
+module github.com/Zekeriyyah/hngx/stagetwop
 
 go 1.20
 
 require (
-	github.com/Zekeriyyah/hngx/stagetwop v0.0.0-20230915103242-83091c2448ed
 	github.com/gorilla/mux v1.8.0
 	github.com/jinzhu/gorm v1.9.16
 )
